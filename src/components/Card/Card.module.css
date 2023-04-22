@@ -1,0 +1,70 @@
+.proContainer {
+    background-color:white;
+    box-shadow: 0 0 5px 0px grey;
+    box-shadow: 5px black;
+    height: 30rem;
+    width: 20%;
+    margin: 1rem;
+}
+.proContainer:hover {
+    box-shadow: 0 0 20px 2px #48abe0;
+}
+.pro img {
+    height: 15rem;
+    padding: 1rem;
+    cursor: pointer;   
+}
+.pro #suitUp{
+    width: 14rem;
+}
+.firstBlock {
+    display: flex;
+    flex-direction: column;
+}
+.Items {
+    display: flex;
+    gap: 2%;
+    flex-wrap: wrap;
+    padding: 1rem;
+}
+.main .sectionp1{
+    background-color: aliceblue;
+}
+.StarIcons {
+    cursor: pointer;
+    transition: color 200ms;
+}
+input[type="radio"] {
+    display: none;
+}
+h5 {
+    margin-top: 4px;
+    margin-bottom: 5px;
+}
+h4 {
+    margin: 10px;
+}
+
+.FaHeart {
+    text-align: right;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+button {
+    background: rgb(250,196,26);
+    height: 2rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+button:hover {
+   
+    text-decoration: underline 2px;
+    font-style: italic;
+}
+.image 
+    {
+        width: 100%;
+        background: red;
+        height: 20rem;
+    }

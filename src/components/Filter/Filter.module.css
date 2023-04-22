@@ -1,0 +1,23 @@
+#size1 {
+    font-size: 4.5rem;
+}
+#size2 {
+    font-size: 4.5rem;
+}
+#size3 {
+    font-size: 4.5rem;
+}
+#size4 {
+    font-size: 4.5rem;
+}
+#size5 {
+    font-size: 4.5rem;
+}
+#size6 {
+    font-size: 4.5rem;
+}
+.filters {
+    justify-content: space-evenly;
+    display: flex;
+    color: white;
+}

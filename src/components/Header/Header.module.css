@@ -1,0 +1,53 @@
+.header {
+    height: 10vh;
+    width: 100vw;
+    background-color: rgb(36, 36, 212);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+}
+.header span {
+    color: orangered;
+}
+.searchItem {
+    background-color: white;
+    border: 1px solid #999;
+      flex-grow: 1;
+      display: flex;
+      margin: 0 0.5vw 0 1.1vw;
+      padding: 10px 0.9vw;
+      border-radius: 5px;
+      position:relative;
+    
+}
+.searchWidth {
+    width: 80vw;
+}
+.searchItem form {
+    flex-grow: 1;
+    margin: 0 10px;
+}
+form input {
+    width: 100%;
+    border: none;
+}
+form input:focus {    
+    outline: none;
+}
+#cartIcon {
+    width: 10rem;
+    cursor: pointer;
+}
+.logo img {
+    cursor: pointer;
+    height:3rem;
+    padding:0.5rem 0rem;
+}
+.logo {
+    display: flex;
+    align-items: center;
+}
+.size {
+    font-size: 2rem;
+}

@@ -1,0 +1,41 @@
+.footer
+{
+    color: white;
+    height: 21vh;
+    background-color: black;
+    margin-bottom: 0px;
+}
+.socialMedia {
+    cursor: pointer;    
+}
+.socialIcons {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    flex-flow: row-reverse;
+    padding-right: 2rem;
+}
+h3 {
+    padding: 1rem;
+    text-align: center;
+    font-size: x-large;
+    font-weight: 600;
+    font-family: emoji;
+    cursor: pointer;
+}
+.policies p {
+    padding:0 1rem;
+    cursor: pointer;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+.policies {
+    display: flex;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
