@@ -4,19 +4,36 @@ import Filter from './components/Filter/Filter';
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import ProductList from './components/ProductList/ProductList';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React from 'react';
+import Cart from './components/Cart/Cart';
 
 
 function App() {
   return (
     <div className="App">
-      <header>
-      <Header />
-      </header>
-      <Filter />
-      <ProductList />
+      <Router>
+        <header>
+          <Header />
+        </header>
+        <Routes>
+          <Route exact path='/' element={
+            <React.Fragment>              
+              <Filter />
+              <ProductList />
+            </React.Fragment>
+          } />
+          <Route exact path='/Cart' element={
+            <React.Fragment>
+              <Cart />
+            </React.Fragment>
+          } />
+        </Routes>
       <footer>
         <Footer />
       </footer>
+      </Router>
+      
     </div>
   );
 }

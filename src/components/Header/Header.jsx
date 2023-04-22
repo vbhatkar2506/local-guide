@@ -1,16 +1,24 @@
 import styles from './Header.module.css'
 //import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
 import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
+import {Link} from 'react-router-dom'
+import { useStateValue } from '../StateProvider'
 
-function Header() {
+const Header = () => {
+  const { myReducer } = useStateValue();
+  const [state] = myReducer;
 return (
 <div className={styles.header}>
     <div className={styles.logo}>
         <div>
-          <h1>
-        {/* <LocationOnOutlinedIcon /> */}
-        Local<span>Guide</span>
-          </h1>
+        <Link to='/'>
+            <h1>
+            {/* <LocationOnOutlinedIcon /> */}
+              Local<span>Guide</span>
+            </h1>
+        </Link>
+
+          
         </div>
     </div>
     <div className={styles.searchWidth}>
@@ -47,7 +55,9 @@ return (
     </div>
 
     <div className={styles.icons}>
-      <FavoriteBorderOutlinedIcon id={styles.size}/>
+      <Link to='/Cart'>
+      <FavoriteBorderOutlinedIcon id={styles.size}/>{state.cartList.length} &nbsp;
+      </Link>
     </div>
 </div>
 );

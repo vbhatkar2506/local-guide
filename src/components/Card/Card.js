@@ -2,10 +2,23 @@ import styles from "./Card.module.css";
 //import { FaStar } from "react-icons/fa"
 import React from "react";
 import Rating from "../Rating";
+import { useStateValue } from "../StateProvider";
 
 
 
-const Card = ({title,price,rating,imageURL}) => {
+const Card = (props) => {
+    const {title,price,rating,imageURL} = props;
+    const { myReducer } = useStateValue();
+    const [,dispatch] = myReducer;
+    const clickHandler = (selectedValue) => {
+        const timeStamp = new Date().getTime();
+        selectedValue = { ...selectedValue, id:timeStamp};
+         
+        dispatch({
+            type:'ADD_TO_CART',
+            payload: selectedValue
+        })
+    }
 return (
 
         <div className={styles.proContainer}>
@@ -21,7 +34,7 @@ return (
                         </div>
                         <h4>Rs. {price}</h4>
                     </div>
-                    <button>Add to Cart</button>
+                    <button onClick={() => clickHandler(props)}>Add to Favourites </button>
                 </div>
         </div>
   
