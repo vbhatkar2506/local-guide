@@ -3,16 +3,30 @@ import styles from './Header.module.css'
 import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
 import {Link} from 'react-router-dom'
 import { useStateValue } from '../StateProvider'
+import Card from '../Card/Card';
+import React, { useState } from 'react';
+
+import RestaurantMenuIcon from '@mui/icons-material/RestaurantMenu';
+import LocalGasStationIcon from '@mui/icons-material/LocalGasStation';
+import LocalHotelIcon from '@mui/icons-material/LocalHotel';
+import StorefrontIcon from '@mui/icons-material/Storefront';
+import LocalHospitalOutlinedIcon from '@mui/icons-material/LocalHospitalOutlined';
+import ParkOutlinedIcon from '@mui/icons-material/ParkOutlined';
+
 
 const Header = () => {
+  const { initialState } = useStateValue();
   const { myReducer } = useStateValue();
+  const [search, setSearch] = useState('');
   const [state] = myReducer;
+  console.log(search);
 return (
+  <div>
 <div className={styles.header}>
     <div className={styles.logo}>
         <div>
         <Link to='/'>
-            <h1>
+            <h1 onClick={(e) => setSearch('')}>
             {/* <LocationOnOutlinedIcon /> */}
               Local<span>Guide</span>
             </h1>
@@ -36,8 +50,8 @@ return (
               <form action="">
                 <input
                   type="text"
-                //   onChange={inpHandler}
-                  placeholder="Try Saree, Kurti or Search by Product Code"
+                 onChange={(e) => setSearch(e.target.value)}
+                  placeholder="Try Searching by Place Name, Address or By Category"
                 />
               </form>
               {/* <-------------------camera icon in navbar---------------------------> */}
@@ -53,13 +67,43 @@ return (
               </svg>
     </div>
     </div>
-
     <div className={styles.icons}>
       <Link to='/Cart'>
       <FavoriteBorderOutlinedIcon id={styles.size}/>{state.cartList.length} &nbsp;
       </Link>
     </div>
 </div>
+
+<div className={styles.filters}>
+            <div>
+                <RestaurantMenuIcon id={styles.size1} onClick={(e) => setSearch('restaurant')}/>
+            </div>
+            <div>
+            <LocalGasStationIcon id={styles.size2} onClick={(e) => setSearch('petrolpump')}/>
+            </div>
+            <div><LocalHotelIcon id={styles.size3} onClick={(e) => setSearch('hotel')}/></div>
+            <div><StorefrontIcon id={styles.size4} onClick={(e) => setSearch('shopping')}/></div>
+            <div><ParkOutlinedIcon id={styles.size5} onClick={(e) => setSearch('garden')}/></div>
+            <div><LocalHospitalOutlinedIcon id={styles.size6} onClick={(e) => setSearch('hospital')}/></div>
+        </div>
+        
+    <div className={styles.ProductList}>
+          {
+              initialState.productList.filter((item) => {
+                return search.toLowerCase() === ''
+                ? item
+                :item.title.toLowerCase().includes(search) || item.address.toLowerCase().includes(search) || item.category.toLowerCase().includes(search); 
+              }).map((item,index) => <Card key={index} {...item}/>)
+          }
+      </div>
+      </div>
 );
 }
 export default Header;
+
+
+export const ProductList = () => {
+
+
+  return 
+}
