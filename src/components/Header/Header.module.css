@@ -81,4 +81,16 @@ form input:focus {
     justify-content: space-evenly;
     display: flex;
     color: white;
+    height: 7rem;
+    align-items: center;
+}
+
+.filterIcon {
+    width: 6rem;
+    height: 6rem;
+}
+.filterIcon:hover {
+    /* background-color: white;
+    color: #8f8fa7;    */
+    cursor:pointer;
 }

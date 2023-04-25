@@ -75,18 +75,19 @@ return (
 </div>
 
 <div className={styles.filters}>
-            <div>
+            
+            <div className={styles.filterIcon} >
                 <RestaurantMenuIcon id={styles.size1} onClick={(e) => setSearch('restaurant')}/>
             </div>
-            <div>
+            <div className={styles.filterIcon} >
             <LocalGasStationIcon id={styles.size2} onClick={(e) => setSearch('petrolpump')}/>
             </div>
-            <div><LocalHotelIcon id={styles.size3} onClick={(e) => setSearch('hotel')}/></div>
-            <div><StorefrontIcon id={styles.size4} onClick={(e) => setSearch('shopping')}/></div>
-            <div><ParkOutlinedIcon id={styles.size5} onClick={(e) => setSearch('garden')}/></div>
-            <div><LocalHospitalOutlinedIcon id={styles.size6} onClick={(e) => setSearch('hospital')}/></div>
+            <div className={styles.filterIcon} ><LocalHotelIcon id={styles.size3} onClick={(e) => setSearch('hotel')}/></div>
+            <div className={styles.filterIcon} ><StorefrontIcon id={styles.size4} onClick={(e) => setSearch('shopping')}/></div>
+            <div className={styles.filterIcon} ><ParkOutlinedIcon id={styles.size5} onClick={(e) => setSearch('garden')}/></div>
+            <div className={styles.filterIcon} ><LocalHospitalOutlinedIcon id={styles.size6} onClick={(e) => setSearch('hospital')}/></div>
         </div>
-        
+
     <div className={styles.ProductList}>
           {
               initialState.productList.filter((item) => {
