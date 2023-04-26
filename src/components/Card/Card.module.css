@@ -69,3 +69,6 @@ button:hover {
     padding: 0px;
     height: -webkit-fill-available;
 }
+span {
+    color: black;
+}

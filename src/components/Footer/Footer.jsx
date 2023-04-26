@@ -5,12 +5,20 @@ import { BsWhatsapp } from "react-icons/bs";
 import { FiTwitter } from "react-icons/fi";
 import { RiTelegramLine } from "react-icons/ri";
 import { AiOutlineCopyright , AiOutlineYoutube } from "react-icons/ai";
+import {Link} from 'react-router-dom'
 
 //AiOutlineHeart
 function Footer() {
     return (
         <div className={styles.footer}>
-            <div></div>            
+            <div className={styles.logo}>
+                <Link to='/'>
+                    <h3 onClick={() => {window.scrollTo({top: 0, left: 0, behavior: 'smooth'});}}>
+                        {/* <LocationOnOutlinedIcon /> */}
+                        Local<span>Guide</span>
+                    </h3>
+                </Link>
+            </div>            
             <div className={styles.container}>
             <div className={styles.policies}>
                 <p>Support</p>
@@ -38,7 +46,7 @@ function Footer() {
                 </div>
             </div>
             </div>
-            <p>Copyright <AiOutlineCopyright /> 2023 Avengers Assemble Pvt. Ltd All Rights Riserved</p>
+            <p>Copyright <AiOutlineCopyright /> 2023 Local Guide Pvt. Ltd All Rights Riserved</p>
         </div>
     );
 }

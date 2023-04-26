@@ -39,3 +39,10 @@ a {
     text-decoration: none;
     color: white;
 }
+h3 span {
+    color: orangered;
+}
+.logo {
+    text-align: left;
+    padding-left: 1rem;
+}
