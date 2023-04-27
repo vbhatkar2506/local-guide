@@ -20,6 +20,7 @@ const Header = () => {
   const [search, setSearch] = useState('');
   const [state] = myReducer;
   console.log(search);
+ 
 return (
   <div>
 <div className={styles.header}>
@@ -76,7 +77,7 @@ return (
 
 <div className={styles.filters}>
             
-            <div className={styles.filterIcon} >
+            <div className={styles.filterIcon}>
                 <RestaurantMenuIcon id={styles.size1} onClick={(e) => setSearch('restaurant')}/>
             </div>
             <div className={styles.filterIcon} >
