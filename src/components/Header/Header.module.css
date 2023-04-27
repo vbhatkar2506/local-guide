@@ -94,3 +94,19 @@ form input:focus {
     color: #8f8fa7;    */
     cursor:pointer;
 }
+.sort {
+    background-color: white;
+    padding: 1rem;
+    text-align: right;
+
+}
+#sortbtn {
+    margin-right: 2rem;
+    background-color: rgb(36, 36, 212);
+    height: 2.5rem;
+    width: 8rem;
+    border: none;
+    color: white;
+    font-size: medium;
+    border-radius: 5px;
+}

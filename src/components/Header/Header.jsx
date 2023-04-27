@@ -87,7 +87,9 @@ return (
             <div className={styles.filterIcon} ><ParkOutlinedIcon id={styles.size5} onClick={(e) => setSearch('garden')}/></div>
             <div className={styles.filterIcon} ><LocalHospitalOutlinedIcon id={styles.size6} onClick={(e) => setSearch('hospital')}/></div>
         </div>
-
+        {/* <div className={styles.sort}>
+          <button id={styles.sortbtn} onClick={setSort(!sort)} >Sort by Rating</button>
+        </div> */}
     <div className={styles.ProductList}>
           {
               initialState.productList.filter((item) => {
@@ -101,10 +103,3 @@ return (
 );
 }
 export default Header;
-
-
-export const ProductList = () => {
-
-
-  return 
-}

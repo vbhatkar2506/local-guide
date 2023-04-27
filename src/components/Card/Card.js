@@ -35,7 +35,7 @@ return (
                         </div>
                         <h4>{timings}</h4>
                     </div>
-                    <button onClick={() => clickHandler(props)}>Add to Favourites </button>
+                    <button className={styles.addToCart} onClick={() => clickHandler(props)}>Add to Favourites </button>
                 </div>
         </div>
   
